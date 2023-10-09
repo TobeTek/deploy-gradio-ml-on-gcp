@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TobeTek">
+    <meta name="description" content="A demo ML application that provides first aid information to users built with Gradio">
+    <title>👨🏾‍⚕️Gradio & ML Demo | First Aid Web App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7b731;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .app-card {
+            width: 50vw;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 10vw;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        button#get-started {
+            color: white;
+            background-color: #e74c3c;
+            padding: 1.5rem 2.5rem;
+            font-size: x-large;
+            border-radius: 20px;
+            border: 0;
+            cursor: pointer;
+            transition: background-color ease-in, border-width 0.3s;
+        }
+        button#get-started:hover{
+            background-color: #f75745;
+            border-width: 5px;
+            border-style: dashed;
+            border-color: white;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .floating-elements {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .floating-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            opacity: 0.8;
+            margin: 10px;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-card">
+            <h1>Welcome to eMLily </h1>
+            <p> A demo ML application that provides first aid information to people diagnosed with internal bleeding.</p>
+            <p><a href="/gradio"><button id="get-started">Get Started!</button></a></p>
+            <blockquote>🚧 The suggestions from the AI are not clinically accurate and exist solely for demostration purposes.</blockquote>
+            <p>Built by <a href="https://github.com/TobeTek">TobeTek</a> for the <a href="https://www.kagglex.org/">KaggleX Program</a> 🚀</p>
+            <p>🛠 with <a href="https://www.gradio.app/guides/quickstart">Gradio</a></p>
+            
+        </div>
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+    </div>
+    <script>
+        // Add JavaScript functionality here if needed
+    </script>
+</body>
+</html>

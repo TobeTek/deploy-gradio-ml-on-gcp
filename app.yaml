@@ -1,0 +1,17 @@
+runtime: python310 # Python 3.10
+
+instance_class: F4
+
+entrypoint: uvicorn src.app:app --host 0.0.0.0 --port $PORT 
+
+handlers:
+- url: /.*
+  script: auto  # Automatically route requests to the application
+
+automatic_scaling:
+  target_cpu_utilization: 0.85  # Set auto-scaling options based on your needs
+  min_instances: 0
+  max_instances: 1
+
+includes:
+ - env.yaml
