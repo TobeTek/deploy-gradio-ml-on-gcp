@@ -1,0 +1,32 @@
+name: Deploy To Production (GCP) 🚀
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main
+
+jobs:
+  deploy-to-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update app.yaml with environment variables
+        run: |
+          echo 'env_variables:
+              HUGGING_FACE_TOKEN: ${{ secrets.HUGGING_FACE_TOKEN }}' > env.yaml
+        shell: bash
+
+      - name: Gcp auth
+        uses: "google-github-actions/auth@v1"
+        with:
+          credentials_json: "${{ secrets.GCP_PRODUCTION_CREDENTIALS }}"
+
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v1"
+        with:
+          version: ">= 363.0.0"
+
+      - name: "Use gcloud To Deploy Prod"
+        run: "gcloud app deploy --quiet"
