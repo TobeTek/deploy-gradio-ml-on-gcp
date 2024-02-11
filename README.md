@@ -1,8 +1,14 @@
 # deploy-gradio-ml-on-gcp
 A demo ML application that provides first aid information to people diagnosed with internal bleeding.A simple ML application built with HuggingFace and Gradio Deployed on GCP
 
-## Live Demo: https://ml-gradio-demo.ew.r.appspot.com/
+## Live Demo
+> https://ml-gradio-demo.ew.r.appspot.com/
 
+## KaggleX Mentee - My Experience
+> [LinkedIn Post - My experience as a KaggleX Mentee](https://www.linkedin.com/posts/emmanuel-katchy_kaggle-kagglex-bipoc-activity-7126311581159727105-QzS_?utm_source=share&utm_medium=member_desktop)
+
+## KaggleX Program Website
+> https://www.kaggle.com/kagglex
 ## Helpful Tutorials
  - https://medium.com/@mehmetcanfarsak/ci-cd-using-github-actions-to-deploy-on-gcp-app-engine-in-3-simple-steps-399fa9764cf2
 
