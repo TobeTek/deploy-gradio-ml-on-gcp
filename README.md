@@ -15,3 +15,8 @@ A demo ML application that provides first aid information to people diagnosed wi
 ### Notes/Todos:
   - You need to disable Gradio flagging in GCloud because the environment is read-only
   - Allow users to upload scan images, and perform live inference
+  - To be able to use this template/project, create a blank `env.yaml` locally. Environment variables can then be defined as needed.
+    An example:
+  ```yaml
+  HUGGING_FACE_TOKEN=<YOUR_API_KEY>
+  ```
